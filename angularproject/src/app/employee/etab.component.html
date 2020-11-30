@@ -1,5 +1,5 @@
 <div>
-    <table>
+    <table border="2px">
         <tr>
             <th>Employee ID</th><th>Name</th><th>Salary</th><th>Avg Salary</th>
         </tr>
@@ -11,6 +11,7 @@
             <td><a (click)="updateemployee(e)">Edit</a>/<a (click)="deleteemployee(e)">Delete</a></td>
         </tr>
     </table> 
+  <h2>Git Angular Project</h2>
     <button type="button" name="btn" (click)="displayForm()">Add Employee</button>
     {{flag}}
     <div *ngIf="flag">
