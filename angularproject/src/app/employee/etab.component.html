@@ -1,0 +1,21 @@
+<div>
+    <table>
+        <tr>
+            <th>Employee ID</th><th>Name</th><th>Salary</th><th>Avg Salary</th>
+        </tr>
+        <tr *ngFor="let e of earr">
+            <td>{{e.eid}}</td>
+            <td>{{e.ename}}</td>
+            <td>{{e.salary}}</td>
+            <td *ngFor="let a of arr">{{a}}</td>
+            <td><a (click)="updateemployee(e)">Edit</a>/<a (click)="deleteemployee(e)">Delete</a></td>
+        </tr>
+    </table> 
+    <button type="button" name="btn" (click)="displayForm()">Add Employee</button>
+    {{flag}}
+    <div *ngIf="flag">
+
+        <eform [upemp]="eob" (myevent)="flag=$event"></eform>
+    
+    </div>
+</div>
